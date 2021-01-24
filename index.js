@@ -7,7 +7,7 @@ import cors from 'cors';
 const data = fs.readFileSync('names.json');
 const namesList = JSON.parse(data);
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 const router = express.Router();
 
